@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask with JavaScript</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Heading -->
+        <h1 class="main-heading">Hate Speech Detection</h1>
+
+        <!-- Twitter Image -->
+        <div class="image-container">
+            <img src="{{ url_for('static', filename='images/images.png') }}" alt="Illustrative Twitter Image" class="image-style">
+        </div>
+
+        <!-- Form -->
+        <form id="messageForm" class="message-form" action="/predict" method="POST">
+            <label for="message" class="form-label">Enter Your Message:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+            <button type="submit" id="submitButton" class="submit-button">Predict</button>
+        </form>
+        
+
+        <!-- Conditional Rendering for Prediction Text -->
+        {% if prediction_text %}
+            <div class="result">{{ prediction_text }}</div>
+        {% endif %}
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Enter message</div>
+
+    <!-- Link JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

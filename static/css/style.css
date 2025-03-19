@@ -1,0 +1,112 @@
+
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Container */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Heading */
+.main-heading {
+    font-size: 2rem;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* Twitter Image */
+.image-container {
+    margin-bottom: 20px;
+}
+.twitter-image {
+    width: 100px;
+    height: auto;
+}
+
+/* Form */
+.message-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-label {
+    font-size: 1rem;
+    color: #555555;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 90%;
+    max-width: 500px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    resize: none;
+    margin-bottom: 15px;
+}
+
+.submit-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #1da1f2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #0d8dd9;
+}
+
+
+/* extra */
+/* Additional style for the Check Another button */
+.check-another-button {
+    background-color: #4caf50;
+    color: #ffffff;
+}
+
+
+/* Toast Notification Styling */
+.toast {
+    visibility: hidden;
+    max-width: 300px;
+    background-color: #ef4a4a; /* Default to red */
+    color: #000000;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 20px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.5s, visibility 0.5s;
+  }
+  
+  .toast.show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .result {
+    margin: 5px;
+    color: forestgreen;
+    font-weight: bold;
+    padding: 5px;
+  }
